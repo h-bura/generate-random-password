@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="script.js" defer></script>
+    <title>Random Password Generator</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="title">Generate a Random Password</h1>
+
+      <div class="showPassword">
+        <h3 class="password-display" id="passwordDisplay">Password...</h3>
+        <span class="description" data-title="Copy"
+          ><img src="images/copy.png" id="copyPassword"
+        /></span>
+      </div>
+      <form class="form" id="passwordGeneratorForm">
+        <label for="characterAmountNumber"> Number Of Characters </label>
+        <div class="character-amount-container">
+          <input
+            type="range"
+            min="1"
+            max="50"
+            value="10"
+            id="characterAmountRange"
+          />
+          <input
+            class="number-input"
+            type="number"
+            min="1"
+            max="50"
+            value="10"
+            id="characterAmountNumber"
+          />
+        </div>
+
+        <label for="includeUppercase"> Include Uppercase </label>
+        <input type="checkbox" id="includeUppercase" />
+        <label for="includeNumber"> Include Number </label>
+        <input type="checkbox" id="includeNumbers" />
+        <label for="includeSymbols"> Include Symbols </label>
+        <input type="checkbox" id="includeSymbols" />
+        <button class="btn" type="submit">
+          <img src="images/generate.png" />Generate Password
+        </button>
+      </form>
+    </div>
+  </body>
+</html>
